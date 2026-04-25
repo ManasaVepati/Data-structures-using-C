@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    int s, t;
+    scanf("%d %d", &s, &t);
+
+    int a, b;
+    scanf("%d %d", &a, &b);
+
+    int m, n;
+    scanf("%d %d", &m, &n);
+
+    int apples[m], oranges[n];
+
+    for (int i = 0; i < m; i++) {
+        scanf("%d", &apples[i]);
+    }
+
+    for (int i = 0; i < n; i++) {
+        scanf("%d", &oranges[i]);
+    }
+
+    int appleCount = 0, orangeCount = 0;
+
+    for (int i = 0; i < m; i++) {
+        int pos = a + apples[i];
+        if (pos >= s && pos <= t)
+            appleCount++;
+    }
+
+    for (int i = 0; i < n; i++) {
+        int pos = b + oranges[i];
+        if (pos >= s && pos <= t)
+            orangeCount++;
+    }
+
+    printf("%d\n%d\n", appleCount, orangeCount);
+
+    return 0;
+}
