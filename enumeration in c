@@ -1,0 +1,8 @@
+#include<stdio.h>
+int main()
+{
+	enum week{m,tu,w,t,f,s};
+	printf("w=%d",w);
+	printf("t=%d",t);
+return 0;
+}
